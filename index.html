@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>So-Real(소리얼) 엔터</title>
+  <title>정미애님 proposal_YoungSound</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -26,7 +27,7 @@
     #welcome {
       position: relative;
       height: 100vh;
-      background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+      background: url('https://www.yeongnam.com/mnt/file/202101/2021011401000475400018561.jpg') no-repeat center center;
       background-size: cover;
       display: flex;
       align-items: center;
@@ -77,7 +78,7 @@
       position: relative;
       display: none;
       padding: 4rem 1rem;
-      background: url('https://images.unsplash.com/photo-1563841930606-67e2bce48b78?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+      background: url('https://image.fnnews.com/resource/media/image/2019/10/28/201910281332099198_l.jpg') no-repeat center center;
       background-size: cover;
     }
 
@@ -120,7 +121,7 @@
 
     .card h3 {
       margin-bottom: 0.5rem;
-      color: #fcd34d; /* 고급스러운 금색 */
+      color: #fcd34d;
     }
 
     .card p {
@@ -156,6 +157,24 @@
       margin-top: 1rem;
     }
 
+    #kakao-share-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      background-color: #fae100;
+      color: #3c1e1e;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    #kakao-share-button:hover {
+      background-color: #f2d400;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -181,9 +200,10 @@
   <section id="welcome">
     <div class="overlay"></div>
     <div class="content">
-      <h1>🎵 Welcome to<br>SoReal(소리얼) World</h1>
-      <p>Artist 매력에 날개를 달아 드립니다.</p>
-      <button onclick="enterSite()">리스트 보기</button>
+      <h1>🎵 정미애 가수님 Contents 제안</h1>
+      <p>“정미애님의 공감을 담은 트로트, 새로운 서사의 시작.”<br>
+        '지금'을 사는 대중과 '공감'으로 통하는 음악을 제안 드립니다.</p>
+      <button onclick="enterSite()">컨텐츠 리스트 보기</button>
     </div>
   </section>
 
@@ -192,8 +212,8 @@
     <div class="main-content">
 
       <div class="card" style="margin-bottom: 3rem;">
-        <h2>🎯SoReal Production 원칙</h2>
-        <p>1. 귀와 마음에 꽂히는 음악<br>2. 공연할 맛이 나는 음악<br>3. 아티스트의 매력을 끌어내주는 유니크한 스타일<br>
+        <h2>Production 전략</h2>
+        <p>1. 엄마들의 반란, 공감해 줄 수 있는 <br>2. 공연할 맛이 나는 음악<br>3. 아티스트의 매력을 끌어내주는 유니크한 스타일<br>
         바로 소리얼의 기준입니다.</p>
       </div>
 
@@ -201,42 +221,61 @@
 
         <div class="card">
           <h3>Style 1: 1분1초가 모잘라</h3>
-          <p>오랜만에 술자리에 참석하여 깊은 해방감을 느끼는 그녀! 신데렐라 처럼 점점 집에 가야하는 시간이 다가오는데..</p>
+          <p>오랜만에 답답한 집에서 벗어나 술자리에 참석하여 멋진 해방감을 느끼는 그녀!<br> 신데렐라 처럼 점점 집에 가야하는 시간이 다가오는데..<br> 시티팝 느낌의 트렌디한 트로트, 술자리 쇼츠를 통한 프로모션 맞춤 컨텐츠</p>
           <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1734890244&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
         </div>
 
         <div class="card">
-          <h3>Style 2: 콧노래</h3>
-          <p>옛날 고향 후배를 만났지만 먹고살기 바빠 회포를 풀지못하고 다음으로 미루는데..</p>
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/QrSWJhX8vuI" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-        <div class="card">
-          <h3>Style 3: 또그러네</h3>
+          <h3>Style 2: 또그러네</h3>
           <p>아이구 이인간 또그러네 저 또 그러네~~ 그래도 넌 내 남자야!</p>
           <iframe width="100%" height="166" scrolling="no" frameborder="no"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/987654321&color=%23ff5500&auto_play=false"></iframe>
         </div>
 
-        <div class="card">
-          <h3>Style 4: 형이라 불러</h3>
-          <p>평소에 어려워서 말 못했는데.. 형이라고 불러도 될까요?</p>
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/A2zKARkpDW4" frameborder="0" allowfullscreen></iframe>
-        </div>
-
       </div>
 
       <div class="about">
-        <h2>🎹 About SoReal(소리얼) Team</h2>
+        <h2>🎹 영사운드 Team</h2>
         <p>대표작곡가<br><a href="tel:01089551395">김영선 : 010-8955-1395</a></p>
         <p>Director<br><a href="tel:01047410379">박세종 : 010-4741-0379</a></p>
         <img src="https://i.imgur.com/syAnCua.jpeg" alt="Team Image">
       </div>
+
+      <div style="text-align: center;">
+        <button id="kakao-share-button">카카오톡으로 공유하기</button>
+      </div>
+
     </div>
   </section>
 
   <script>
+    Kakao.init('1288413091185ec74a903fbf99281040'); // ← 여기에 본인의 JavaScript 키 입력
+
+    document.getElementById('kakao-share-button').addEventListener('click', function () {
+      Kakao.Share.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '정미애님 컨텐츠 제안서',
+          description: '영사운드에서 제안드리는 고급 트로트 컨셉 확인하기',
+          imageUrl: 'https://i.imgur.com/syAnCua.jpeg',
+          link: {
+            mobileWebUrl: window.location.href,
+            webUrl: window.location.href
+          }
+        },
+        buttons: [
+          {
+            title: '바로 보기',
+            link: {
+              mobileWebUrl: window.location.href,
+              webUrl: window.location.href
+            }
+          }
+        ]
+      });
+    });
+
     function enterSite() {
       const welcome = document.getElementById('welcome');
       const main = document.getElementById('main');
